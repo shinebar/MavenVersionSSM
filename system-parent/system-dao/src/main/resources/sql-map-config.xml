@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- myBatis和spring集成此文件可以不用，可以通过applicationContext.xml加载Maper.xml文件 -->
+ ppppp
+ <!--  <settings>
+    <setting name="useStatementNamespaces" value="true"/>
+    <setting name="enhancementEnabled" value="true"/>
+    <setting name="lazyLoadingEnabled" value="true"/>
+  </settings> -->
+ <!--  <typeAliases>
+     <typeAlias type="java.lang.Long" alias="Long"/>
+     <typeAlias type="java.lang.String" alias="String"/>
+     <typeAlias type="java.lang.Integer" alias="Integer"/>
+  </typeAliases> -->
+<!--<mappers>
+     <mapper resource="ibatis/UserMap.xml"/>
+  </mappers> 
+ -->
+ </configuration>

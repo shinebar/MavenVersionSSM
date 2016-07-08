@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context.xsd
+      http://www.springframework.org/schema/mvc
+      http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+    <!--这一句处理对静态资源的访问-->
+    <mvc:default-servlet-handler />
+    <!--这一句指定了扫描注解生成Controller的根包名-->
+    <context:component-scan base-package="com.wjs" />
+    <!--这一句相当于开启注解扫描功能-->
+    <mvc:annotation-driven />
+
+    <!--规定模板文件的类型和位置-->
+    <bean id="velocityConfigurer"
+        class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath" value="WEB-INF/templates"/>
+        <property name="velocityProperties">
+            <props>
+                <prop key="input.encoding">utf-8</prop>
+                <prop key="output.encoding">utf-8</prop>
+            </props>
+        </property>
+    </bean>
+   <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	  <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+	  <property name="prefix" value="/WEB-INF/jsp/"/>
+	  <property name="suffix" value=".jsp"/>
+	  <property name="order" value="10"/>
+	</bean>
+    <!--配置附加工具，以及将后缀为vm的文件交给下面的Resolver处理-->
+    <bean id="velocityViewResolver"
+        class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+        <property name="suffix" value=".vm" />
+        <property name="contentType" value="text/html;charset=utf-8" />
+        <!-- <property name="toolboxConfigLocation" value="/WEB-INF/toolbox.xml"/> -->
+    </bean>
+
+
+</beans>
