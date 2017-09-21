@@ -15,5 +15,9 @@
 			<groupId>com.wjs.parent</groupId>
 			<artifactId>system-dao</artifactId>
 		</dependency>
+		<dependency>
+			  <groupId>junit</groupId>
+			  <artifactId>junit</artifactId>
+			</dependency>
 	</dependencies>
 </project>
