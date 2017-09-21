@@ -12,7 +12,7 @@ import com.wjs.dao.IUserDao;
 import com.wjs.model.User;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:applicationContext.xml"})
+@ContextConfiguration(locations={"classpath:application-dao-test.xml"})
 public class TestUserDAO {
     //@Autowired
     //private UserMapper userMapper;
