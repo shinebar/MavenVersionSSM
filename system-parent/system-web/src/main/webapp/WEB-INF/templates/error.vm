@@ -6,7 +6,11 @@
 </head>
 <body>
     <div>
-        $message
+        ${message}
+        <br/>
+        serverName:${serverName}
+        <br/>
+        sessionId:${sessionId}
     </div>
 </body>
 </html>

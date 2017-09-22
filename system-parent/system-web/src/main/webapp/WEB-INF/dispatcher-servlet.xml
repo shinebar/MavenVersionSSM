@@ -15,7 +15,16 @@
     <context:component-scan base-package="com.wjs" />
     <!--这一句相当于开启注解扫描功能-->
     <mvc:annotation-driven />
-
+  
+    <!-- <bean class="com.wjs.controller.ext.ViewNameExtensionViewResolver">
+       <property name="order" value="0"/>
+        <property name="viewResolvers">
+            <map>
+                <entry key="jsp" value-ref="jspViewResolver"/>
+                <entry key="vm" value-ref="velocityViewResolver"/>
+            </map>
+        </property>
+    </bean> -->
     <!--规定模板文件的类型和位置-->
     <bean id="velocityConfigurer"
         class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
@@ -27,19 +36,18 @@
             </props>
         </property>
     </bean>
-   <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+  <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	  <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
 	  <property name="prefix" value="/WEB-INF/jsp/"/>
 	  <property name="suffix" value=".jsp"/>
-	  <property name="order" value="10"/>
+	  <property name="order" value="1"/>
 	</bean>
     <!--配置附加工具，以及将后缀为vm的文件交给下面的Resolver处理-->
     <bean id="velocityViewResolver"
         class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+        <property name="order" value="0"/>
         <property name="suffix" value=".vm" />
         <property name="contentType" value="text/html;charset=utf-8" />
         <!-- <property name="toolboxConfigLocation" value="/WEB-INF/toolbox.xml"/> -->
     </bean>
-
-
 </beans>

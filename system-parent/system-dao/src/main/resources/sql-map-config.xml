@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-<!-- myBatis和spring集成此文件可以不用，可以通过applicationContext.xml加载Maper.xml文件 -->
- ppppp
- <!--  <settings>
+<!-- myBatis和spring集成此文件可以不用，可以通过applicationContext.xml加载  Maper.xml文件, 可是后来因为要加载日志，打印sql语句，只能加上 -->
+ <properties>
+    <property name="dialect" value="mysql"/>
+ </properties>
+ <settings>
+    <setting name="logImpl" value="LOG4J"/>
+ </settings>
+ <!-- <settings>
     <setting name="useStatementNamespaces" value="true"/>
     <setting name="enhancementEnabled" value="true"/>
     <setting name="lazyLoadingEnabled" value="true"/>
   </settings> -->
- <!--  <typeAliases>
+  <typeAliases>
      <typeAlias type="java.lang.Long" alias="Long"/>
      <typeAlias type="java.lang.String" alias="String"/>
      <typeAlias type="java.lang.Integer" alias="Integer"/>
-  </typeAliases> -->
+  </typeAliases>
 <!--<mappers>
      <mapper resource="ibatis/UserMap.xml"/>
-  </mappers> 
- -->
- </configuration>
+  </mappers> -->
+</configuration>

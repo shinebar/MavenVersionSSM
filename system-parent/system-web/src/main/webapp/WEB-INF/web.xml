@@ -4,7 +4,7 @@
  <display-name>system-web</display-name>
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath*:applicationContext.xml</param-value>
+        <param-value>classpath:applicationContext.xml</param-value>
         <!--指定Context的配置文件-->
     </context-param>
 

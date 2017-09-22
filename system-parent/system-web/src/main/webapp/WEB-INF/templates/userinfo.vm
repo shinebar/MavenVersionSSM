@@ -7,8 +7,14 @@
 <body>
     <div>
         id:${user.id}
+        <br/>
         username:${user.userName}
+        <br/>
         password:${user.password}
+         <br/>
+        serverName:${serverName}
+         <br/>
+        sessionId:${sessionId}
     </div>
 </body>
 </html>

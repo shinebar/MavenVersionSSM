@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>login</title>
 </head>
 <body>
-
+   this is login.jsp page.<br/>
+   serverName=<%=request.getLocalAddr()+":"+request.getServerPort() %>
+   <br/>
+   sessionId=<%=request.getSession().getId() %>
 </body>
 </html>
