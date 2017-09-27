@@ -36,9 +36,9 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
     </bean>
 
 
-    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+    <!-- <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg index="0" ref="sqlSessionFactory" />
-    </bean>
+    </bean> -->
 
     <!--这一段让我们的MapperInterface能够最终在Spring中生成Bean最后被AutoWired-->
    <!--  <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">

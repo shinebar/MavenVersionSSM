@@ -2,10 +2,9 @@ package com.wjs.dao.impl;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.wjs.dao.IUserDao;
@@ -24,13 +23,13 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements IUserDao {
 		//userMapper.insertUser(user) == 1 ? true : false;
 	}
     
-	@Resource
+	@Autowired
 	@Override
 	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
 		// TODO Auto-generated method stub
 		super.setSqlSessionFactory(sqlSessionFactory);
 	}
-
+   
 	public User login(String username, String password) {
 		return this.getSqlSession().selectOne(NAME_SPACE+"selectUserInfo");//userMapper.selectByUsernameAndPwd(username, password);
 	}
