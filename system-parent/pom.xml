@@ -12,7 +12,7 @@
 		<module>system-service</module>
 		<module>system-web</module>
         <module>system-api</module>
-  </modules>
+   </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,7 +22,7 @@
 		<mybatis.version>3.2.6</mybatis.version>
 		<!-- log4j日志文件管理包版本 -->
 		<slf4j.version>1.7.7</slf4j.version>
-		<log4j.version>1.7.7</log4j.version>
+		<log4j.version>1.2.17</log4j.version>
 		<!-- mysql数据库驱动版本 -->
 		<mysql.connector-version>5.1.21</mysql.connector-version>
 		<!-- junit版本号 -->
@@ -47,6 +47,11 @@
 
 	<dependencyManagement>
 		<dependencies>
+		    <dependency>
+		       <groupId>com.wjs.parent</groupId>
+		       <artifactId>system-api</artifactId>
+		       <version>${project.version}</version>
+		    </dependency>
 		    <dependency>
 		       <groupId>com.wjs.parent</groupId>
 		       <artifactId>system-domain</artifactId>
@@ -181,11 +186,6 @@
             </dependency>
 			<!-- JSTL标签类 -->
 			<dependency>
-				<groupId>taglibs</groupId>
-				<artifactId>standard</artifactId>
-				<version>${taglib.version}</version>
-			</dependency>
-			<dependency>
 			   <groupId>javax.servlet</groupId>
                <artifactId>jstl</artifactId>
                <version>${jstl.version}</version>
@@ -201,14 +201,6 @@
 	            <artifactId>velocity-tools</artifactId>
 	            <version>${velocity.tools.version}</version>
 	        </dependency>
-			<!-- 日志文件管理包 -->
-			<!-- log start -->
-			<dependency>
-				<groupId>log4j</groupId>
-				<artifactId>log4j</artifactId>
-				<version>${log4j.version}</version>
-			</dependency>
-
 
 			<!-- 格式化对象，方便输出日志 -->
 			<dependency>
@@ -216,20 +208,32 @@
 				<artifactId>fastjson</artifactId>
 				<version>${fastjson.version}</version>
 			</dependency>
-
+			
+            <!-- 日志文件管理包 -->
+			<!-- log start -->
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+            <dependency>
+				<groupId>org.slf4j</groupId>
+			    <artifactId>jcl-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
 				<version>${slf4j.version}</version>
 			</dependency>
-
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-log4j12</artifactId>
 				<version>${slf4j.version}</version>
 			</dependency>
 			<!-- log end -->
+			
 			<!-- 映入JSON -->
 			<dependency>
 				<groupId>org.codehaus.jackson</groupId>
