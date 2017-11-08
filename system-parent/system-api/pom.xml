@@ -22,7 +22,7 @@
 			<artifactId>netty-all</artifactId>
 			<version>4.1.6.Final</version>
 		</dependency>
-<!-- 引用httpClient的同时引入了日志依赖文件 -->
+		<!-- 引用httpClient的同时引入了日志依赖文件 -->
 		<dependency>
 		    <groupId>commons-httpclient</groupId>
 		    <artifactId>commons-httpclient</artifactId>
@@ -49,6 +49,46 @@
 		    <artifactId>zookeeper</artifactId>
 		    <version>3.3.1</version>
 		</dependency>
+		<!--Itext 生成 pdf 文件  -->
+		<!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
+		<dependency>
+		    <groupId>com.itextpdf</groupId>
+		    <artifactId>itextpdf</artifactId>
+		    <version>5.5.11</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.itextpdf.tool/xmlworker -->
+		<dependency>
+		    <groupId>com.itextpdf.tool</groupId>
+		    <artifactId>xmlworker</artifactId>
+		    <version>5.5.11</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+		<dependency>
+		    <groupId>org.freemarker</groupId>
+		    <artifactId>freemarker</artifactId>
+		    <version>2.3.19</version>
+		</dependency>
+		<!-- Flying Saucer-CSS高级特性支持 -->
+		<!-- https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-pdf -->
+		<dependency>
+		    <groupId>org.xhtmlrenderer</groupId>
+		    <artifactId>flying-saucer-pdf</artifactId>
+		    <version>9.1.5</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-pdf-itext5 -->
+		<dependency>
+		   <groupId>org.xhtmlrenderer</groupId>
+		   <artifactId>flying-saucer-pdf-itext5</artifactId>
+		   <version>9.1.5</version>
+		</dependency>
+		<!-- LMAX 开源了一个高性能并发编程框架。可以理解为消费者-生产者的消息发布订阅模式 -->
+		<!-- https://mvnrepository.com/artifact/com.lmax/disruptor -->
+		<dependency>
+		    <groupId>com.lmax</groupId>
+		    <artifactId>disruptor</artifactId>
+		    <version>3.3.7</version>
+		</dependency>
 		
 	</dependencies>
+	
 </project>
