@@ -34,7 +34,7 @@
 		<mock.version>2.0.8</mock.version>
 		<mybatis-spring.version>1.2.2</mybatis-spring.version>
 		<commons-codec.version>1.9</commons-codec.version>
-		<commons-io.version>2.4</commons-io.version>
+		<commons-io.version>2.7</commons-io.version>
 		<servlet-api.version>2.5</servlet-api.version>
 		<javaee-api.version>7.0</javaee-api.version>
 		<commons-dbcp2.version>2.0</commons-dbcp2.version>
